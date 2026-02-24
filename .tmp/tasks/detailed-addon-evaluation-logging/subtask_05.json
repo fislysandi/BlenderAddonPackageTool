@@ -1,0 +1,28 @@
+{
+  "id": "detailed-addon-evaluation-logging-05",
+  "seq": "05",
+  "title": "Capture requester sign-off and archive readiness check",
+  "status": "pending",
+  "depends_on": [
+    "04"
+  ],
+  "parallel": false,
+  "context_files": [
+    ".tmp/tasks/detailed-addon-evaluation-logging/task.json",
+    ".tmp/tasks/detailed-addon-evaluation-logging/console-validation.md"
+  ],
+  "reference_files": [
+    ".tmp/tasks/detailed-addon-evaluation-logging/subtask_01.json",
+    ".tmp/tasks/detailed-addon-evaluation-logging/subtask_02.json",
+    ".tmp/tasks/detailed-addon-evaluation-logging/subtask_03.json",
+    ".tmp/tasks/detailed-addon-evaluation-logging/subtask_04.json"
+  ],
+  "deliverables": [
+    ".tmp/tasks/detailed-addon-evaluation-logging/signoff.md"
+  ],
+  "acceptance_criteria": [
+    "Requester explicitly confirms output is useful and satisfactory in Blender system console.",
+    "A follow-up check confirms all subtask acceptance criteria are met.",
+    "Feature is marked ready for archive only after requester confirmation and follow-up check."
+  ]
+}

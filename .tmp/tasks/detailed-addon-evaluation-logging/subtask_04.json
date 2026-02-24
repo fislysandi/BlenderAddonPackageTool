@@ -1,0 +1,25 @@
+{
+  "id": "detailed-addon-evaluation-logging-04",
+  "seq": "04",
+  "title": "Verify console output quality with practical debug scenarios",
+  "status": "pending",
+  "depends_on": [
+    "03"
+  ],
+  "parallel": false,
+  "context_files": [
+    "addons/subtitle_studio/docs/dev.md"
+  ],
+  "reference_files": [
+    "framework.py",
+    "addons/subtitle_studio/README.md"
+  ],
+  "deliverables": [
+    ".tmp/tasks/detailed-addon-evaluation-logging/console-validation.md"
+  ],
+  "acceptance_criteria": [
+    "Validation includes at least three scenarios: success, warning/non-fatal issue, and failure.",
+    "For each scenario, output shows what was evaluated and why the result occurred.",
+    "Validation notes confirm logs reduce ambiguity versus prior output."
+  ]
+}

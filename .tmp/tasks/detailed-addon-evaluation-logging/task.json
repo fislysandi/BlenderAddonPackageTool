@@ -1,0 +1,31 @@
+{
+  "id": "detailed-addon-evaluation-logging",
+  "name": "Detailed Addon Evaluation Logging",
+  "status": "active",
+  "objective": "Provide clear, consistent evaluation diagnostics in Blender system console for addon actions and feature execution paths.",
+  "context_files": [
+    "/home/fislysandi/.config/opencode/context/core/task-management/standards/task-schema.md",
+    "/home/fislysandi/.config/opencode/context/core/task-management/guides/splitting-tasks.md",
+    "/home/fislysandi/.config/opencode/context/core/task-management/navigation.md",
+    "addons/subtitle_studio/docs/dev.md",
+    "framework.py"
+  ],
+  "reference_files": [
+    "addons/subtitle_studio/__init__.py",
+    "addons/subtitle_studio/operators/ops_dependencies.py",
+    "addons/subtitle_studio/operators/ops_transcribe.py",
+    "addons/subtitle_studio/core/transcriber.py",
+    "addons/subtitle_studio/props.py",
+    "addons/subtitle_studio/panels/main_panel_sections.py"
+  ],
+  "exit_criteria": [
+    "Console output includes addon-prefixed logs for each major user action path.",
+    "Logs include evaluated action name, sanitized inputs/context, decision/result, and failure reason when applicable.",
+    "When behavior is unexpected without an exception, logs include evaluative state transitions for diagnosis.",
+    "Logging format is consistent across operators and core functions and documented for contributors.",
+    "Requester confirms debug output is clear, useful, and sufficient for troubleshooting before archive."
+  ],
+  "subtask_count": 5,
+  "completed_count": 1,
+  "created_at": "2026-02-25T01:57:16+03:00"
+}
