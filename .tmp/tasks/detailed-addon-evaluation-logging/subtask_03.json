@@ -1,28 +1,28 @@
 {
   "id": "detailed-addon-evaluation-logging-03",
   "seq": "03",
-  "title": "Implement structured evaluation logging in critical execution paths",
-  "status": "pending",
+  "title": "Configure debugger-side evaluation tracing (no addon code edits)",
+  "status": "completed",
   "depends_on": [
     "02"
   ],
   "parallel": false,
   "context_files": [
-    "addons/subtitle_studio/docs/dev.md"
+    "addons/subtitle_studio/docs/dev.md",
+    ".tmp/tasks/detailed-addon-evaluation-logging/evaluation-map.md"
   ],
   "reference_files": [
-    "addons/subtitle_studio/operators/ops_transcribe.py",
-    "addons/subtitle_studio/core/transcriber.py",
-    "addons/subtitle_studio/operators/ops_dependencies.py"
+    "framework.py",
+    "scripts/test.py",
+    ".tmp/debugger_sessions/05fbe8c6fbdf4e10a2c65542b8aabd05.json"
   ],
   "deliverables": [
-    "addons/subtitle_studio/operators/ops_transcribe.py",
-    "addons/subtitle_studio/core/transcriber.py",
-    "addons/subtitle_studio/operators/ops_dependencies.py"
+    ".tmp/tasks/detailed-addon-evaluation-logging/debugger-evaluation-config.json"
   ],
   "acceptance_criteria": [
-    "Each targeted path logs evaluated action and result using the unified format.",
-    "At least one non-exception unexpected behavior path logs explicit state transitions.",
-    "No log message includes sensitive or noisy unsanitized payloads."
+    "Debugger-side plan defines how evaluation events are captured in the standard format without editing addon source files.",
+    "Plan covers at least one non-exception unexpected behavior path with explicit state transitions.",
+    "Plan includes sanitization rules to avoid sensitive or noisy unsanitized payloads.",
+    "No files under addons/subtitle_studio/ are modified by this subtask."
   ]
 }

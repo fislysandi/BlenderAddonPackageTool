@@ -2,7 +2,7 @@
   "id": "detailed-addon-evaluation-logging-02",
   "seq": "02",
   "title": "Define and document unified evaluation log format",
-  "status": "pending",
+  "status": "completed",
   "depends_on": [
     "01"
   ],
