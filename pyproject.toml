@@ -1,0 +1,47 @@
+[project]
+name = "blender-addon-framework"
+version = "1.0.0"
+description = "Blender Addon Development Framework with UV support"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Xinyu Zhu", email = ""},
+]
+dependencies = [
+    "fake-bpy-module-3.5>=20231118",
+    "watchdog>=4.0.0",
+    "toml>=0.10.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.6.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+create = "src.commands.create:main"
+docs = "src.commands.docs:main"
+test = "src.commands.test:main"
+audit-stale-addons = "src.commands.audit_stale_addons:main"
+compile = "src.commands.compile:main"
+release = "src.commands.release:main"
+addon-deps = "src.commands.addon_deps:main"
+test-framework = "src.commands.test_framework:main"
+rename-addon = "src.commands.rename_addon:main"
+template = "src.commands.template:main"
+completion = "src.commands.completion:main"
+baf = "src.commands.baf:main"
+
+[tool.uv]
+# Enable package mode to install console scripts
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

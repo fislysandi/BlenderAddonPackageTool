@@ -1,0 +1,5 @@
+name = "basic_panel"
+source_addon = "subtitle_studio"
+description = "Reusable Sequencer UI panel scaffold adapted from Subtitle Studio"
+target_prefix = "src/ui"
+compatibility = "unified-v1"

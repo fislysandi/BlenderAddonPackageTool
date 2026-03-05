@@ -1,0 +1,26 @@
+{
+  "id": "detailed-addon-evaluation-logging-01",
+  "seq": "01",
+  "title": "Map evaluation points and current logging gaps",
+  "status": "completed",
+  "depends_on": [],
+  "parallel": false,
+  "context_files": [
+    "addons/subtitle_studio/docs/dev.md",
+    "framework.py"
+  ],
+  "reference_files": [
+    "addons/subtitle_studio/operators/ops_transcribe.py",
+    "addons/subtitle_studio/operators/ops_dependencies.py",
+    "addons/subtitle_studio/core/transcriber.py",
+    "addons/subtitle_studio/props.py"
+  ],
+  "deliverables": [
+    ".tmp/tasks/detailed-addon-evaluation-logging/evaluation-map.md"
+  ],
+  "acceptance_criteria": [
+    "At least five key evaluation points are documented across operator and core code paths.",
+    "Current ambiguous or missing console outputs are listed with concrete examples.",
+    "A proposed canonical log event shape is documented."
+  ]
+}

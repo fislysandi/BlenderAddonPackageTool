@@ -1,0 +1,26 @@
+{
+  "id": "detailed-addon-evaluation-logging-02",
+  "seq": "02",
+  "title": "Define and document unified evaluation log format",
+  "status": "completed",
+  "depends_on": [
+    "01"
+  ],
+  "parallel": false,
+  "context_files": [
+    ".tmp/tasks/detailed-addon-evaluation-logging/evaluation-map.md",
+    "addons/subtitle_studio/docs/dev.md"
+  ],
+  "reference_files": [
+    "addons/subtitle_studio/__init__.py",
+    "addons/subtitle_studio/panels/main_panel_sections.py"
+  ],
+  "deliverables": [
+    "addons/subtitle_studio/docs/dev.md"
+  ],
+  "acceptance_criteria": [
+    "The format specifies required fields: action, phase, sanitized context, decision path, outcome, and reason.",
+    "The format defines event phases for start, checkpoint, success, warning, and fail states.",
+    "A contributor-facing example log line set is added to docs."
+  ]
+}

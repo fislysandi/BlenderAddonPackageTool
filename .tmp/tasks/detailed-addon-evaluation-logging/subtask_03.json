@@ -1,0 +1,28 @@
+{
+  "id": "detailed-addon-evaluation-logging-03",
+  "seq": "03",
+  "title": "Configure debugger-side evaluation tracing (no addon code edits)",
+  "status": "completed",
+  "depends_on": [
+    "02"
+  ],
+  "parallel": false,
+  "context_files": [
+    "addons/subtitle_studio/docs/dev.md",
+    ".tmp/tasks/detailed-addon-evaluation-logging/evaluation-map.md"
+  ],
+  "reference_files": [
+    "framework.py",
+    "scripts/test.py",
+    ".tmp/debugger_sessions/05fbe8c6fbdf4e10a2c65542b8aabd05.json"
+  ],
+  "deliverables": [
+    ".tmp/tasks/detailed-addon-evaluation-logging/debugger-evaluation-config.json"
+  ],
+  "acceptance_criteria": [
+    "Debugger-side plan defines how evaluation events are captured in the standard format without editing addon source files.",
+    "Plan covers at least one non-exception unexpected behavior path with explicit state transitions.",
+    "Plan includes sanitization rules to avoid sensitive or noisy unsanitized payloads.",
+    "No files under addons/subtitle_studio/ are modified by this subtask."
+  ]
+}
